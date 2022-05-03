@@ -233,7 +233,7 @@ onMounted(async () => {
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Наш преподаватель</div>
 
                 <div rounded-32px bg="[#fffff]" border="2px [#60d471]" h-full w="full lg:90%" py-7px px-7px grid grid-cols="1 lg:[2fr_3fr]">
-                    <img rounded-24px src="img/trener.jpg" alt="" width="300" height="300">
+                    <img rounded-24px src="/img/trener.jpg" alt="" width="300" height="300">
                     <div text="16px" pr="lg:20px" fw-400>
                         <div text="24px lg:32px" fw-700 my-10px>Эльза Галиева</div>
                         <div fw-700 mb="20px">
@@ -271,7 +271,7 @@ onMounted(async () => {
                 </p>
                 <div p-10px pt-15px flex items-center justify-between overflow-x-scroll lg:overflow-hidden gap-40px>
                     <div rounded min-w-200px w-200px h-400px style="box-shadow: 2px 4px 12px rgb(0 0 0 / 25%);" p-20px>
-                        <img rounded src="img/review1.png" alt="" width="160" height="160">
+                        <img rounded src="/img/review1.png" alt="" width="160" height="160">
                         <p text="16px lg:20px center" fw-700 mt-5px>Глеб</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>7 лет, играет более полугода</p>
                         <p text="10px center">
@@ -281,7 +281,7 @@ onMounted(async () => {
                         </p>
                     </div>
                     <div rounded min-w-200px w-200px h-400px style="box-shadow: 2px 4px 12px rgb(0 0 0 / 25%);" p-20px>
-                        <img rounded src="img/review2.png" alt="" width="160" height="160">
+                        <img rounded src="/img/review2.png" alt="" width="160" height="160">
                         <p text="16px lg:20px center" fw-700 mt-5px>Ирлан</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>9 лет, занимается год</p>
                         <p text="10px center">
@@ -291,7 +291,7 @@ onMounted(async () => {
                         </p>
                     </div>
                     <div rounded min-w-200px w-200px h-400px style="box-shadow: 2px 4px 12px rgb(0 0 0 / 25%);" p-20px>
-                        <img rounded src="img/review3.png" alt="" width="160" height="160">
+                        <img rounded src="/img/review3.png" alt="" width="160" height="160">
                         <p text="16px lg:20px center" fw-700 mt-5px>Кирилл</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>8 лет, учится полтора года</p>
                         <p text="10px center">
@@ -302,7 +302,7 @@ onMounted(async () => {
                         </p>
                     </div>
                     <div rounded min-w-200px w-200px h-400px style="box-shadow: 2px 4px 12px rgb(0 0 0 / 25%);" p-20px>
-                        <img rounded src="img/review4.png" alt="" width="160" height="160">
+                        <img rounded src="/img/review4.png" alt="" width="160" height="160">
                         <p text="16px lg:20px center" fw-700 mt-5px>Ранель</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>9 лет, занимается год</p>
                         <p text="10px center">
