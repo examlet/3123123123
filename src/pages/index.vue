@@ -4,7 +4,6 @@ import { BORDER_TYPE, COLOR, Chessboard } from "@/assets/js/Chessboard.js"
 const a = ref()
 const b = ref()
 const c = ref()
-const d = ref()
 onMounted(async () => {
     new Chessboard(a.value, {
         position: "rn2k1r1/ppp1pp1p/3p2p1/5bn1/P7/2N2B2/1PPPPP2/2BNK1RR",
@@ -35,23 +34,13 @@ onMounted(async () => {
         },
         orientation: COLOR.white
     })
-
-    new Chessboard(d.value, {
-        position: "rn2k1r1/ppp1pp1p/3p2p1/5bn1/P7/2N2B2/1PPPPP2/2BNK1RR",
-        sprite: { url: "/img/chessboard-sprite.svg" },
-        style: {
-            cssClass: "chessboard-js",
-            borderType: BORDER_TYPE.frame
-        },
-        orientation: COLOR.white
-    })
 })
 </script>
 
 <template>
     <div h-full w-full>
         <section id="start" pt="26px lg:100px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div grid grid-cols="[auto_1fr]" grid-rows-1>
                     <div>
                         <h1 text="[#222222] 24px xl:64px" fw-500 leading="120%">
@@ -60,38 +49,10 @@ onMounted(async () => {
                         <h2 text="[#222222] 17px xl:36px" mt-20px fw-500 leading="110%">
                             для подростков и детей от 4-х лет
                         </h2>
-                        <div hidden mt="50px lg:100px" h="240px lg:120px" w="100% lg:90%" grid grid-cols="2 lg:4"
-                            gap="10px lg:20px" text="18px" fw500 leading-snug>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-game-console></div>
-                                <div text="12px lg:18px">Занятия в игровом формате</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">От игры с пешкой
-                                    до партии в слепую</div>
-                            </div>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-star-review></div>
-                                <div text="12px lg:18px">Решение интересных задач</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Тактический штурм,
-                                    задания на логику
-                                </div>
-                            </div>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-cloud-logging></div>
-                                <div text="12px lg:18px">Материал сохраняется на платформе</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Домашние задания и
-                                    видео с теорией</div>
-                            </div>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-pedestrian-child></div>
-                                <div text="12px lg:18px">Практика и результат на турнирах</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Поиск турниров и
-                                    получение разряда</div>
-                            </div>
-                        </div>
 
                         <div hidden lg:grid grid-cols="[auto_1fr]">
                             <div text="16px xl:20px" pt="20px lg:100px">
-                                <div text="11px lg:16px [#6d7885]" my="5px lg:10px">
+                                <div text="12px lg:18px [#6d7885]" mb="5px lg:20px">
                                     Занятия с профессиональным тренером от 600₽,<br>
                                     познакомьтесь с нами на первом бесплатном уроке!
                                 </div>
@@ -110,16 +71,16 @@ onMounted(async () => {
                             </div>
                         </div>
 
-                        <div grid lg:hidden grid-rows="[auto_1fr]">        
+                        <div grid lg:hidden grid-rows="[auto_1fr]">
                             <div mt-60px>
                                 <video rounded-xl preload="auto" playsinline autoplay loop muted>
-                                     <source src="/img/video.mp4" type="video/mp4">
+                                    <source src="/img/video.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div text="16px xl:20px" pt="20px lg:100px">
-                                <div text="11px lg:16px [#6d7885]" my="10px">
+                                <div text="12px lg:16px [#6d7885]" my="10px" fw-600>
                                     Занятия с профессиональным тренером от 600₽,<br>
-                                    познакомьтесь с нами на первом бесплатном уроке!
+                                    познакомьтесь с нами на бесплатном уроке!
                                 </div>
                                 <QButton block h="lg:46px" text="16px" leading="lg:46px" w="full xl:300px">
                                     Записаться на пробный урок
@@ -138,39 +99,42 @@ onMounted(async () => {
                         <img src="https://pinia.vuejs.org/logo.svg" alt="" width="80" height="80">
                     </div>
                 </div>
-                <div mt="50px lg:100px" h="240px lg:120px" w="100% lg:90%" grid grid-cols="2 lg:4"
-                            gap="10px lg:20px" text="18px" fw500 leading-snug>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-game-console></div>
-                                <div text="12px lg:18px">Занятия в игровом формате</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">От игры с пешкой
-                                    до партии в слепую</div>
-                            </div>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-star-review></div>
-                                <div text="12px lg:18px">Решение интересных задач</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Тактический штурм,
-                                    задания на логику
-                                </div>
-                            </div>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-cloud-logging></div>
-                                <div text="12px lg:18px">Материал сохраняется на платформе</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Домашние задания и
-                                    видео с теорией</div>
-                            </div>
-                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
-                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-pedestrian-child></div>
-                                <div text="12px lg:18px">Практика и результат на турнирах</div>
-                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Поиск турниров и
-                                    получение разряда</div>
-                            </div>
+                <div mt="44px lg:100px" h="240px lg:120px" w="100% lg:90%" grid grid-cols="2 lg:4" gap="20px lg:20px"
+                    text="18px" fw500 leading-snug>
+                    <div gap-10px>
+                        <div block text="[#0077ff] xl" mt="5px lg:0" i-carbon-game-console></div>
+                        <div text="12px lg:18px">Занятия в игровом формате</div>
+                        <div text="12px lg:14px [#6d7885]" mt="5px lg:10px">
+                            От игры с пешкой до партии в слепую
                         </div>
+                    </div>
+                    <div gap-10px>
+                        <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-star-review></div>
+                        <div text="12px lg:18px">Решение интересных задач</div>
+                        <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">
+                            Тактический штурм, задания на логику
+                        </div>
+                    </div>
+                    <div gap-10px>
+                        <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-cloud-logging></div>
+                        <div text="12px lg:18px">Материал сохраняется на платформе</div>
+                        <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">
+                            Домашние задания и видео с теорией
+                        </div>
+                    </div>
+                    <div gap-10px>
+                        <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-pedestrian-child></div>
+                        <div text="12px lg:18px">Практика и результат на турнирах</div>
+                        <div text="12px lg:14px [#6d7885]" mt="5px lg:10px">
+                            Поиск турниров и получение разряда
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="about" pt="84px xl:94px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="about" pt="44px xl:94px">
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="20px lg:40px">Как проходят занятия?</div>
 
                 <div grid grid-cols="1 lg:[1fr_1fr_1fr]" gap-30px>
@@ -242,7 +206,7 @@ onMounted(async () => {
                 </div>
             </div>
 
-            <div bg="[#f2f4f7]" rounded w-full h-100px mt="94px">
+            <div bg="[#f2f4f7]" rounded w-full h-100px mt="44px lg:94px">
                 <div h-full w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
@@ -254,13 +218,13 @@ onMounted(async () => {
             </div>
         </section>
 
-        <section id="game" pt="84px xl:94px">
-            <div h-full w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="game" pt="44px xl:94px">
+            <div h-full w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div bg="[#ffe56c]" rounded-2xl w-full h-full p="10px lg:40px">
-                    <div hidden lg:grid grid-cols="[4fr_3fr]" gap-40px>
+                    <div grid grid-cols="1 lg:[4fr_3fr]" gap="20px lg:40px">
                         <div grid grid-rows="[1fr_auto]">
-                            <div mt-40px>
-                                <p fw-700>
+                            <div mt="lg:40px">
+                                <p text="14px lg:16px" fw-700>
                                     Как называются эти дебюты?
                                     <span fw-600> Ваш ребенок будет знать уже через 4 занятия</span>
                                 </p>
@@ -273,26 +237,12 @@ onMounted(async () => {
                             <div ref="c" w-230px h-230px />
                         </div>
                     </div>
-                    <div lg:hidden text-center>
-                        <p mb-5px fw-700>Как называются эти дебюты?</p>
-                        <div grid grid-cols="[1fr_auto]" gap-10px>
-                            <div mt-25px grid grid-rows-3 gap-10px>
-                                <QButton bordered w-full px-2px>1</QButton>
-                                <QButton bordered w-full px-2px>2</QButton>
-                                <QButton bordered w-full px-2px>3</QButton>
-                            </div>
-                            <div ref="d" w-230px h-230px />
-                        </div>
-
-                        <p text="14px" my-10px>Ваш ребенок узнает уже через 4 занятия</p>
-                        <QButton w="90%" mx="5%">НАЧАТЬ ЗАНЯТИЯ</QButton>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="trener" pt="84px xl:94px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="trener" pt="44px xl:94px">
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Наш преподаватель</div>
 
                 <div rounded-32px bg="[#fffff]" border="2px [#60d471]" h-full w-full py-7px px-7px grid
@@ -327,8 +277,8 @@ onMounted(async () => {
             </div>
         </section>
 
-        <section id="reviews" pt="84px xl:94px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="reviews" pt="44px xl:94px">
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <p text="20px lg:24px center" w-full fw-600>ЧТО ГОВОРЯТ РОДИТЕЛИ НАШИХ УЧЕНИКОВ?</p>
                 <p text="14px lg:18px center" mb-10px>
                     Еще больше отзывов вы можете найти в блоке «Актуальное» в нашем инстаграме @chessedu.ru
@@ -390,13 +340,13 @@ onMounted(async () => {
             </div>
         </section>
 
-        <section id="price" pt="84px xl:94px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="price" pt="44px xl:94px">
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Какая стоимость?</div>
                 <div grid gap="20px">
                     <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
                         rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #26bcf1;">
-                        <div ml-20px fw-700>Пробное занятие</div>
+                        <div ml-20px mt="5px lg:0" fw-700>Пробное занятие</div>
                         <div ml="20px lg:0">0₽ (<span fw-600>бесплатно</span>)</div>
                         <div ml="20px lg:0"><span fw-600>1</span> занятие</div>
                         <div ml="20px lg:0">Длительность <span fw-600>30 минут</span></div>
@@ -405,7 +355,7 @@ onMounted(async () => {
 
                     <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
                         rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #0077ff;">
-                        <div ml-20px fw-700>Индивидуальное занятие</div>
+                        <div ml-20px mt="5px lg:0" fw-700>Индивидуальное занятие</div>
                         <div ml="20px lg:0">800₽ (<span fw-600>800₽ за урок</span>)</div>
                         <div ml="20px lg:0"><span fw-600>1</span> занятие</div>
                         <div ml="20px lg:0">Длительность <span fw-600>55 минут</span></div>
@@ -414,7 +364,7 @@ onMounted(async () => {
 
                     <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
                         rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #60d471;">
-                        <div ml-20px fw-700>x4 Индивидуальное занятие</div>
+                        <div ml-20px mt="5px lg:0" fw-700>x4 Индивидуальное занятие</div>
                         <div ml="20px lg:0">2800₽ (<span fw-600>700₽ за урок</span>)</div>
                         <div ml="20px lg:0"><span fw-600>4</span> занятия</div>
                         <div ml="20px lg:0">Длительность <span fw-600>60 минут</span></div>
@@ -423,7 +373,7 @@ onMounted(async () => {
 
                     <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
                         rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #ffcc44;">
-                        <div ml-20px fw-700>x8 Индивидуальное занятие</div>
+                        <div ml-20px mt="5px lg:0" fw-700>x8 Индивидуальное занятие</div>
                         <div ml="20px lg:0">4800₽ (<span fw-600>600₽ за урок</span>)</div>
                         <div ml="20px lg:0"><span fw-600>8</span> занятий</div>
                         <div ml="20px lg:0">Длительность <span fw-600>60 минут</span></div>
@@ -435,7 +385,7 @@ onMounted(async () => {
                 </div>
             </div>
 
-            <div bg="[#f2f4f7]" rounded w-full h-100px mt="94px">
+            <div bg="[#f2f4f7]" rounded w-full h-100px mt="44px lg:94px">
                 <div h-full w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
@@ -447,8 +397,8 @@ onMounted(async () => {
             </div>
         </section>
 
-        <section id="faq" pt="84px xl:94px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="faq" pt="44px xl:94px">
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Остались вопросы?</div>
                 <hr w-full text="[#e7e8ec]" block mb-10px>
                 <QSpoiler title="С какого возраста лучше начать?">
@@ -504,9 +454,9 @@ onMounted(async () => {
                         Несколько человек - больше сумма!
                     </p>
                 </QSpoiler>
-                <hr w-full text="[#e7e8ec]" my-10px>
+                <hr w-full text="[#e7e8ec]" block my-10px>
             </div>
-            <div bg="[#f2f4f7]" rounded w-full h-100px mt="64px">
+            <div bg="[#f2f4f7]" rounded w-full h-100px mt="44px lg:64px">
                 <div h-full w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
@@ -518,11 +468,11 @@ onMounted(async () => {
             </div>
         </section>
 
-        <section id="action" pt="84px xl:94px">
-            <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
+        <section id="action" pt="44px xl:94px">
+            <div w="full xl:1024px" px="10px lg:0" relative mx-auto>
                 <div grid grid-cols="1 xl:[1fr_1fr]" gap-20px>
                     <div flex flex-culumn items-start>
-                        <h2 text="16px xl:24px [#222222]" fw-500 my-20px>
+                        <h2 text="16px xl:24px [#222222]" fw-500 my="lg:20px">
                             <div mb-20px>
                                 Запишите ребенка на пробный урок,
                                 <br />где мы определим его уровень
