@@ -51,8 +51,7 @@ const scrollIntoView = (elementId: string) => {
                     </div>
                 </div>
             </div>
-            <div
-                class="absolute block xl:hidden bg-[#fff] rounded top-74px shadow-lg w-full transition duration-300 -z-1"
+            <div class="absolute block xl:hidden bg-[#fff] rounded top-74px shadow-lg w-full transition duration-300 -z-1"
                 :class="[mobileMenuCollapsed ? '-translate-y-120%' : '-translate-y-0']">
                 <div flex flex-col py-20px text-18px w="full xl:1024px" px="20px sm:10px lg:0" relative mx-auto h-full>
                     <div my-30px>тута еще не сделал</div>
@@ -60,10 +59,14 @@ const scrollIntoView = (elementId: string) => {
             </div>
         </header>
 
-        <main flex="grow shrink-0" basis-auto pt-64px h-full>
+        <!-- <main flex="grow shrink-0" basis-auto pt-64px h-full>
             <div class="absolute left-10px right-10px top-10px bottom-43px overflow-y-auto pr-10px mt-64px">
                 <slot />
             </div>
+        </main> -->
+
+        <main class="fixed left-10px right-10px top-74px bottom-43px overflow-y-auto pr-10px">
+            <slot />
         </main>
 
         <footer fixed h-33px bottom-0 left-0 right-0 border="t [#e7e7e7]">
