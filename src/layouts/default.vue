@@ -61,7 +61,7 @@ const scrollIntoView = (elementId: string) => {
         </header>
 
         <main flex="grow shrink-0" basis-auto pt-64px h-full>
-            <div class="absolute left-10px right-10px top-10px bottom-10px overflow-y-auto pr-10px mb-33px mt-64px">
+            <div class="absolute left-10px right-10px top-10px bottom-10px overflow-y-auto pr-10px mt-64px">
                 <slot />
             </div>
         </main>
