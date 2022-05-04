@@ -8,7 +8,7 @@ const scrollIntoView = (elementId: string) => {
 </script>
 
 <template>
-    <div bg="[#ffffff]" flex flex-col min-h-screen>
+    <div bg="[#ffffff]" flex flex-col min-h-screen h-screen>
         <header fixed top-0 left-0 right-0 h-64px z-99>
             <div bg="[#ffffff]" border="b [#e7e7e7]" w-full h-full z-100 absolute>
                 <div h-full w="full xl:1024px" p="x-20px lg:0" relative mx-auto>

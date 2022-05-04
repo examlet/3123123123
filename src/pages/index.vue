@@ -8,7 +8,7 @@ const d = ref()
 onMounted(async () => {
     new Chessboard(a.value, {
         position: "rn2k1r1/ppp1pp1p/3p2p1/5bn1/P7/2N2B2/1PPPPP2/2BNK1RR",
-        sprite: { url: "~/assets/img/chessboard-sprite.svg" },
+        sprite: { url: "@/assets/img/chessboard-sprite.svg" },
         style: {
             cssClass: "blue",
             borderType: BORDER_TYPE.frame
@@ -18,7 +18,7 @@ onMounted(async () => {
 
     new Chessboard(b.value, {
         position: "rn2k1r1/ppp1pp1p/3p2p1/5bn1/P7/2N2B2/1PPPPP2/2BNK1RR",
-        sprite: { url: "~/assets/img/chessboard-sprite.svg" },
+        sprite: { url: "@/assets/img/chessboard-sprite.svg" },
         style: {
             cssClass: "green",
             borderType: BORDER_TYPE.frame
@@ -28,7 +28,7 @@ onMounted(async () => {
 
     new Chessboard(c.value, {
         position: "rn2k1r1/ppp1pp1p/3p2p1/5bn1/P7/2N2B2/1PPPPP2/2BNK1RR",
-        sprite: { url: "~/assets/img/chessboard-sprite.svg" },
+        sprite: { url: "@/assets/img/chessboard-sprite.svg" },
         style: {
             cssClass: "chessboard-js",
             borderType: BORDER_TYPE.frame
@@ -38,7 +38,7 @@ onMounted(async () => {
 
     new Chessboard(d.value, {
         position: "rn2k1r1/ppp1pp1p/3p2p1/5bn1/P7/2N2B2/1PPPPP2/2BNK1RR",
-        sprite: { url: "~/assets/img/chessboard-sprite.svg" },
+        sprite: { url: "@/assets/img/chessboard-sprite.svg" },
         style: {
             cssClass: "chessboard-js",
             borderType: BORDER_TYPE.frame
