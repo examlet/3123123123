@@ -35,7 +35,7 @@ const scrollIntoView = (elementId: string) => {
                             </div>
                         </div>
                         <QButton bordered lg:hidden>
-                            <div mb-5px i-carbon-phone-voice-filled />
+                            <div mb-3px i-carbon-phone-voice-filled />
                         </QButton>
                         <div leading-snug hidden lg:block>
                             +7 (987) 189-88-88
