@@ -50,17 +50,17 @@ onMounted(async () => {
 
 <template>
     <div h-full w-full>
-        <section id="start" pt="26px lg:76px">
+        <section id="start" pt="26px lg:100px">
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div grid grid-cols="[auto_1fr]" grid-rows-1>
                     <div>
                         <h1 text="[#222222] 24px xl:64px" fw-500 leading="120%">
                             Индивидуальные уроки<br> по шахматам — онлайн
                         </h1>
-                        <h2 text="[#222222] 18px xl:36px" mt-20px fw-500 leading="110%">
+                        <h2 text="[#222222] 17px xl:36px" mt-20px fw-500 leading="110%">
                             для подростков и детей от 4-х лет
                         </h2>
-                        <div mt="50px lg:100px" h="240px lg:120px" w="100% lg:90%" grid grid-cols="2 lg:4"
+                        <div hidden mt="50px lg:100px" h="240px lg:120px" w="100% lg:90%" grid grid-cols="2 lg:4"
                             gap="10px lg:20px" text="18px" fw500 leading-snug>
                             <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
                                 <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-game-console></div>
@@ -88,19 +88,54 @@ onMounted(async () => {
                                     получение разряда</div>
                             </div>
                         </div>
-                        <div cursor-pointer text="16px xl:20px" mt="20px lg:70px">
-                            <QButton h="lg:46px" text="16px" leading="lg:46px" w="full xl:300px">Записаться на пробный
-                                урок
-                            </QButton>
-                            <button ml="lg:20px" mt="30px lg:0"
-                                onclick="document.getElementById('about').scrollIntoView();">
-                                <div i-carbon-sort-descending w-40px />
-                                <span>Подробнее о занятиях</span>
-                            </button>
+
+                        <div hidden lg:grid grid-cols="[auto_1fr]">
+                            <div text="16px xl:20px" pt="20px lg:100px">
+                                <div text="11px lg:16px [#6d7885]" my="5px lg:10px">
+                                    Занятия с профессиональным тренером от 600₽,<br>
+                                    познакомьтесь с нами на первом бесплатном уроке!
+                                </div>
+                                <QButton block h="lg:46px" text="16px" leading="lg:46px" w="full xl:300px">
+                                    Записаться на пробный урок
+                                </QButton>
+                                <button mt="30px" onclick="document.getElementById('about').scrollIntoView();">
+                                    <div i-carbon-sort-descending w-40px />
+                                    <span>Подробнее о занятиях</span>
+                                </button>
+                            </div>
+                            <div px-100px pt-50px pb-200px>
+                                <video rounded-xl preload="auto" playsinline autoplay loop muted>
+                                    <source src="/img/video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <div grid lg:hidden grid-rows="[auto_1fr]">        
+                            <div mt-100px>
+                                <video rounded-xl preload="auto" playsinline autoplay loop muted>
+                                     <source src="/img/video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div text="16px xl:20px" pt="20px lg:100px">
+                                <div text="11px lg:16px [#6d7885]" my="5px lg:10px">
+                                    Занятия с профессиональным тренером от 600₽,<br>
+                                    познакомьтесь с нами на первом бесплатном уроке!
+                                </div>
+                                <QButton block h="lg:46px" text="16px" leading="lg:46px" w="full xl:300px">
+                                    Записаться на пробный урок
+                                </QButton>
+                                <button mt="30px" onclick="document.getElementById('about').scrollIntoView();">
+                                    <div i-carbon-sort-descending w-40px />
+                                    <span>Подробнее о занятиях</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div absolute right-0 hidden lg:block>
+                    <div absolute right-20px top-20px hidden lg:block rotate-6>
                         <img src="https://pinia.vuejs.org/logo.svg" alt="" width="200" height="200">
+                    </div>
+                    <div absolute right-0 top-120px lg:hidden rotate-6>
+                        <img src="https://pinia.vuejs.org/logo.svg" alt="" width="80" height="80">
                     </div>
                 </div>
             </div>
@@ -232,7 +267,8 @@ onMounted(async () => {
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Наш преподаватель</div>
 
-                <div rounded-32px bg="[#fffff]" border="2px [#60d471]" h-full w-full py-7px px-7px grid grid-cols="1 lg:[2fr_3fr]">
+                <div rounded-32px bg="[#fffff]" border="2px [#60d471]" h-full w-full py-7px px-7px grid
+                    grid-cols="1 lg:[2fr_3fr]">
                     <img rounded-24px src="/img/trener.jpg" alt="" width="300" height="300">
                     <div text="16px" pr="lg:20px" fw-400>
                         <div text="24px lg:32px" fw-700 my-10px>Эльза Галиева</div>
@@ -275,8 +311,8 @@ onMounted(async () => {
                         <p text="16px lg:20px center" fw-700 mt-5px>Глеб</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>7 лет, играет более полугода</p>
                         <p text="10px center">
-                            Ребёнок занимается с радостью, всегда с интересом рассказывает, как прошёл урок🙈 
-                            Занятия начались с сентября и уже есть первая победа - выполнили 3 разряд и 1 место! 
+                            Ребёнок занимается с радостью, всегда с интересом рассказывает, как прошёл урок🙈
+                            Занятия начались с сентября и уже есть первая победа - выполнили 3 разряд и 1 место!
                             С удовольствием продолжим шахматы с Эльзой Маратовной😊
                         </p>
                     </div>
@@ -285,7 +321,7 @@ onMounted(async () => {
                         <p text="16px lg:20px center" fw-700 mt-5px>Ирлан</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>9 лет, занимается год</p>
                         <p text="10px center">
-                            Решили отдать сына на занятия онлайн и не пожалели: выполнил норму 
+                            Решили отдать сына на занятия онлайн и не пожалели: выполнил норму
                             разряда, а самое главное - у ребёнка горят глаза, он занят полезным делом!🤩
                             Даже оценки в школе подтянулись, мы очень довольны✅
                         </p>
@@ -295,8 +331,8 @@ onMounted(async () => {
                         <p text="16px lg:20px center" fw-700 mt-5px>Кирилл</p>
                         <p text="12px lg:16px center" fw-600 mb-10px>8 лет, учится полтора года</p>
                         <p text="10px center">
-                            Проявил желание заниматься именно онлайн индивидуально🙆‍♂️ 
-                            Такой подход помог достичь нам отличных результатов - за плечами серьёзный опыт, 
+                            Проявил желание заниматься именно онлайн индивидуально🙆‍♂️
+                            Такой подход помог достичь нам отличных результатов - за плечами серьёзный опыт,
                             норма разряда и призерство в турнирах👍
                             Ребёнку нравится - и игра, и мозговая активность!
                         </p>
@@ -307,7 +343,7 @@ onMounted(async () => {
                         <p text="12px lg:16px center" fw-600 mb-10px>9 лет, занимается год</p>
                         <p text="10px center">
                             Благодаря занятиям обыгрывает всех в семье 👍
-                            Онлайн-уроки любит и ждет с нетерпением 🥰 
+                            Онлайн-уроки любит и ждет с нетерпением 🥰
                             Главное, что есть желание у ребёнка, а у тренера индивидуальный подход, нам нравится!
                         </p>
                     </div>
@@ -330,8 +366,8 @@ onMounted(async () => {
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Какая стоимость?</div>
                 <div grid gap="20px">
-                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px" rounded
-                        style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #26bcf1;">
+                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
+                        rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #26bcf1;">
                         <div ml-20px fw-700>Пробное занятие</div>
                         <div ml="20px lg:0">0₽ (<span fw-600>бесплатно</span>)</div>
                         <div ml="20px lg:0"><span fw-600>1</span> занятие</div>
@@ -339,8 +375,8 @@ onMounted(async () => {
                         <QButton ml="20px" w="80%" mb="10px lg:0">ЗАПИСАТЬСЯ</QButton>
                     </div>
 
-                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px" rounded
-                        style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #0077ff;">
+                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
+                        rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #0077ff;">
                         <div ml-20px fw-700>Индивидуальное занятие</div>
                         <div ml="20px lg:0">800₽ (<span fw-600>800₽ за урок</span>)</div>
                         <div ml="20px lg:0"><span fw-600>1</span> занятие</div>
@@ -348,8 +384,8 @@ onMounted(async () => {
                         <QButton ml="20px" w="80%" mb="10px lg:0">ЗАПИСАТЬСЯ</QButton>
                     </div>
 
-                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px" rounded
-                        style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #60d471;">
+                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
+                        rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #60d471;">
                         <div ml-20px fw-700>x4 Индивидуальное занятие</div>
                         <div ml="20px lg:0">2800₽ (<span fw-600>700₽ за урок</span>)</div>
                         <div ml="20px lg:0"><span fw-600>4</span> занятия</div>
@@ -357,8 +393,8 @@ onMounted(async () => {
                         <QButton ml="20px" w="80%" mb="10px lg:0">ЗАПИСАТЬСЯ</QButton>
                     </div>
 
-                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px" rounded
-                        style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #ffcc44;">
+                    <div gap="10px lg:0" grid grid-cols="1 lg:[4fr_3fr_2fr_3fr_3fr]" items-center w-full h="lg:60px"
+                        rounded style="box-shadow: 0 10px 56px rgb(0 0 0 / 7%); border-left: 6px solid #ffcc44;">
                         <div ml-20px fw-700>x8 Индивидуальное занятие</div>
                         <div ml="20px lg:0">4800₽ (<span fw-600>600₽ за урок</span>)</div>
                         <div ml="20px lg:0"><span fw-600>8</span> занятий</div>
@@ -389,7 +425,8 @@ onMounted(async () => {
                 <hr w-full text="[#e7e8ec]" block mb-10px>
                 <QSpoiler title="С какого возраста лучше начать?">
                     <p>
-                        Согласно возрастной психологии, в 5-6 лет игровая деятельность у ребёнка переходит в учебную.<br>
+                        Согласно возрастной психологии, в 5-6 лет игровая деятельность у ребёнка переходит в
+                        учебную.<br>
                         Уже в этом возрасте активно развивается мышление и улучшается память.<br>
                         Так что смело можно начинать обучаться шахматам.
                     </p>
@@ -397,7 +434,8 @@ onMounted(async () => {
                 <hr w-full text="[#e7e8ec]" block my-10px>
                 <QSpoiler title="Как быстро ребенок начнет играть?">
                     <p>
-                        Согласно возрастной психологии, в 5-6 лет игровая деятельность у ребёнка переходит в учебную.<br>
+                        Согласно возрастной психологии, в 5-6 лет игровая деятельность у ребёнка переходит в
+                        учебную.<br>
                         Уже в этом возрасте активно развивается мышление и улучшается память.<br>
                         Так что смело можно начинать обучаться шахматам.
                     </p>
@@ -412,8 +450,8 @@ onMounted(async () => {
                 <hr w-full text="[#e7e8ec]" block my-10px>
                 <QSpoiler title="Как я могу контролировать обучение?">
                     <p>
-                       Все занятия записываются и высылаются вам в еженедельном отчете.<br>
-                       Такой подход помогает отслеживать активность ребёнка и его прогресс.
+                        Все занятия записываются и высылаются вам в еженедельном отчете.<br>
+                        Такой подход помогает отслеживать активность ребёнка и его прогресс.
                     </p>
                 </QSpoiler>
                 <hr w-full text="[#e7e8ec]" block my-10px>
@@ -466,7 +504,8 @@ onMounted(async () => {
                         </h2>
                     </div>
                     <div relative flex justify-center>
-                        <img src="https://thumb.tildacdn.com/tild3736-6661-4962-b430-366336306132/-/format/webp/a8c62a58f44667b63f15.png" alt="Действие" width="300" height="300">
+                        <img src="https://thumb.tildacdn.com/tild3736-6661-4962-b430-366336306132/-/format/webp/a8c62a58f44667b63f15.png"
+                            alt="Действие" width="300" height="300">
                     </div>
                 </div>
             </div>
