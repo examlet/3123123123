@@ -452,7 +452,7 @@ onMounted(async () => {
             </div>
         </section>
 
-        <section id="action" pt="84px xl:94px" mb="lg:50px">
+        <section id="action" pt="84px xl:94px">
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div grid grid-cols="1 xl:[1fr_1fr]" gap-20px>
                     <div flex flex-culumn items-start>
