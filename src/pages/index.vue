@@ -111,13 +111,13 @@ onMounted(async () => {
                         </div>
 
                         <div grid lg:hidden grid-rows="[auto_1fr]">        
-                            <div mt-100px>
+                            <div mt-60px>
                                 <video rounded-xl preload="auto" playsinline autoplay loop muted>
                                      <source src="/img/video.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div text="16px xl:20px" pt="20px lg:100px">
-                                <div text="11px lg:16px [#6d7885]" my="5px lg:10px">
+                                <div text="11px lg:16px [#6d7885]" my="10px">
                                     Занятия с профессиональным тренером от 600₽,<br>
                                     познакомьтесь с нами на первом бесплатном уроке!
                                 </div>
@@ -134,7 +134,7 @@ onMounted(async () => {
                     <div absolute right-20px top-20px hidden lg:block rotate-6>
                         <img src="https://pinia.vuejs.org/logo.svg" alt="" width="200" height="200">
                     </div>
-                    <div absolute right-0 top-120px lg:hidden rotate-6>
+                    <div absolute right-0 top-100px lg:hidden rotate-6>
                         <img src="https://pinia.vuejs.org/logo.svg" alt="" width="80" height="80">
                     </div>
                 </div>
