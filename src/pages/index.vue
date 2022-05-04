@@ -211,7 +211,7 @@ onMounted(async () => {
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
                         <div col-span="2 lg:1" text="16px lg:24px" fw800 mt="10px lg:0">Нужна личная консультация?</div>
-                        <QButton w="full lg:300px" bordered mb="15px lg:0"></QButton>
+                        <QInput placeholder="Имя, контакт для связи" h-32px w="full lg:300px" mb="15px lg:0" />
                         <QButton bordered mb="15px lg:0">ПОЛУЧИТЬ</QButton>
                     </div>
                 </div>
@@ -331,9 +331,10 @@ onMounted(async () => {
                 <div h-full w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
-                        <div col-span="2 lg:1" text="16px lg:24px" fw800 mt="10px lg:0">Ого! Вдохновляет, хотим также
+                        <div col-span="2 lg:1" text="16px lg:24px" fw800 mt="10px lg:0">
+                            Ого! Вдохновляет, хотим также
                         </div>
-                        <QButton w="full lg:300px" bordered mb="15px lg:0"></QButton>
+                        <QInput placeholder="Имя, контакт для связи" h-32px w="full lg:300px" mb="15px lg:0" />
                         <QButton bordered mb="15px lg:0">ЗАПИСАТЬСЯ</QButton>
                     </div>
                 </div>
@@ -390,7 +391,7 @@ onMounted(async () => {
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
                         <div col-span="2 lg:1" text="16px lg:24px" fw800 mt="10px lg:0">Вопросы по оплате?</div>
-                        <QButton w="full lg:300px" bordered mb="15px lg:0"></QButton>
+                        <QInput placeholder="Имя, контакт для связи" h-32px w="full lg:300px" mb="15px lg:0" />
                         <QButton bordered mb="15px lg:0">ЗАДАТЬ</QButton>
                     </div>
                 </div>
@@ -461,7 +462,7 @@ onMounted(async () => {
                     <div h-full items-center grid grid-cols="[4fr_1fr] lg:[2fr_1fr_1fr]" grid-rows="[1fr_3fr] lg:1"
                         gap="10px lg:20px">
                         <div col-span="2 lg:1" text="16px lg:24px" fw800 mt="10px lg:0">Не нашли здесь ответ?</div>
-                        <QButton w="full lg:300px" bordered mb="15px lg:0"></QButton>
+                        <QInput placeholder="Имя, контакт для связи" h-32px w="full lg:300px" mb="15px lg:0" />
                         <QButton bordered mb="15px lg:0">СПРОСИТЬ</QButton>
                     </div>
                 </div>

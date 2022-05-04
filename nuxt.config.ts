@@ -51,7 +51,7 @@ export default defineNuxtConfig({
         shortcuts: [
             ['btn', 'inline-block rounded-sm text-12px tracking-wide transition-all h-32px px-20px leading-32px items-center'],
             ['btn-basic', 'fw700 bg-[#26bcf1] hover:bg-[#7dd6f6] active:bg-[#93dcf7] text-[#ffffff]'],
-            ['btn-bordered', 'fw600 bg-transparent border border-[#26bcf1] hover:bg-[#fbfbfb] active:bg-[#f2f4f7] text-[#26bcf1]'],
+            ['btn-bordered', 'fw600 bg-transparent border bg-[#ffffff] border-[#26bcf1] hover:bg-[#fbfbfb] active:bg-[#f2f4f7] text-[#26bcf1]'],
             ['btn-secondary', ''],
             
 
