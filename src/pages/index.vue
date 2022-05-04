@@ -103,7 +103,7 @@ onMounted(async () => {
                                     <span>Подробнее о занятиях</span>
                                 </button>
                             </div>
-                            <div px-100px pt-50px pb-200px>
+                            <div px-100px pt-50px>
                                 <video rounded-xl preload="auto" playsinline autoplay loop muted>
                                     <source src="/img/video.mp4" type="video/mp4">
                                 </video>
@@ -138,10 +138,38 @@ onMounted(async () => {
                         <img src="https://pinia.vuejs.org/logo.svg" alt="" width="80" height="80">
                     </div>
                 </div>
+                <div mt="50px lg:100px" h="240px lg:120px" w="100% lg:90%" grid grid-cols="2 lg:4"
+                            gap="10px lg:20px" text="18px" fw500 leading-snug>
+                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
+                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-game-console></div>
+                                <div text="12px lg:18px">Занятия в игровом формате</div>
+                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">От игры с пешкой
+                                    до партии в слепую</div>
+                            </div>
+                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
+                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-star-review></div>
+                                <div text="12px lg:18px">Решение интересных задач</div>
+                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Тактический штурм,
+                                    задания на логику
+                                </div>
+                            </div>
+                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
+                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-cloud-logging></div>
+                                <div text="12px lg:18px">Материал сохраняется на платформе</div>
+                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Домашние задания и
+                                    видео с теорией</div>
+                            </div>
+                            <div grid grid-cols="[1fr_5fr] lg:1" grid-rows="[auto_1fr] lg:[1fr_2fr_3fr]" gap-10px>
+                                <div text="[#0077ff] xl" mt="5px lg:0" i-carbon-pedestrian-child></div>
+                                <div text="12px lg:18px">Практика и результат на турнирах</div>
+                                <div col-span="2 lg:1" text="12px lg:14px [#6d7885]" mt="5px lg:10px">Поиск турниров и
+                                    получение разряда</div>
+                            </div>
+                        </div>
             </div>
         </section>
 
-        <section id="about" pt="93px">
+        <section id="about" pt="84px xl:94px">
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="20px lg:40px">Как проходят занятия?</div>
 
