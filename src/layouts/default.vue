@@ -61,12 +61,12 @@ const scrollIntoView = (elementId: string) => {
         </header>
 
         <main flex="grow shrink-0" basis-auto pt-64px h-full>
-            <div class="absolute left-10px right-10px top-10px bottom-10px overflow-y-auto pr-10px mb-33px mt-64px">
+            <div class="absolute left-10px right-10px top-10px bottom-10px overflow-y-auto pr-10px mt-64px">
                 <slot />
             </div>
         </main>
 
-        <footer fixed bottom-0 left-0 right-0 border="t [#e7e7e7]" h-33px>
+        <footer border="t [#e7e7e7]" h-33px>
             <div w="full xl:1024px" px="20px sm:10px lg:0" relative mx-auto h-full>
                 <div py-5px text="2px lg:14px" fw500>
                     <QLink>Не является публичной оффертой</QLink>

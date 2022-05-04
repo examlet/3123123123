@@ -49,7 +49,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div>
+    <div h-full w-full>
         <section id="start" pt="26px lg:76px">
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div grid grid-cols="[auto_1fr]" grid-rows-1>
@@ -232,7 +232,7 @@ onMounted(async () => {
             <div w="full xl:1024px" p="x-20px lg:0" relative mx-auto>
                 <div text="24px lg:36px [#222222]" fw600 mb="40px">Наш преподаватель</div>
 
-                <div rounded-32px bg="[#fffff]" border="2px [#60d471]" h-full w="full lg:90%" py-7px px-7px grid grid-cols="1 lg:[2fr_3fr]">
+                <div rounded-32px bg="[#fffff]" border="2px [#60d471]" h-full w-full py-7px px-7px grid grid-cols="1 lg:[2fr_3fr]">
                     <img rounded-24px src="/img/trener.jpg" alt="" width="300" height="300">
                     <div text="16px" pr="lg:20px" fw-400>
                         <div text="24px lg:32px" fw-700 my-10px>Эльза Галиева</div>
